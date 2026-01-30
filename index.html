@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Windows Desktop Web</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- DESKTOP -->
+  <div id="desktop">
+
+    <!-- Desktop Icons -->
+    <div class="icon" ondblclick="openWindow()">
+      <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png" />
+      <span>New Folder</span>
+    </div>
+
+    <div class="icon second" ondblclick="openWindow()">
+      <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png" />
+      <span>Projects</span>
+    </div>
+
+    <div class="icon third" ondblclick="openWindow()">
+      <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png" />
+      <span>Docs</span>
+    </div>
+
+    <!-- Folder Window -->
+    <div id="window" class="window hidden">
+      <div class="title-bar">
+        Folder
+        <button onclick="closeWindow()">✖</button>
+      </div>
+      <div class="content">
+        Folder content here
+      </div>
+    </div>
+
+    <!-- Right Click Menu -->
+    <ul id="context-menu">
+      <li onclick="createFolder()">New Folder</li>
+      <li onclick="refreshDesktop()">Refresh</li>
+      <li onclick="searchItem()">Search</li>
+    </ul>
+
+  </div>
+
+  <!-- TASKBAR -->
+<div id="taskbar">
+
+  <!-- Left / Start -->
+  <div class="task-left">
+    <button id="start-btn" class="task-icon">
+      <img src="https://cdn-icons-png.flaticon.com/512/888/888879.png" />
+    </button>
+  </div>
+
+  <!-- Center / Pinned Apps -->
+  <div class="task-center">
+    <div class="task-icon">
+      <img src="https://cdn-icons-png.flaticon.com/512/732/732076.png" /> <!-- Chrome -->
+    </div>
+    <div class="task-icon">
+      <img src="https://cdn-icons-png.flaticon.com/512/732/732221.png" /> <!-- Edge -->
+    </div>
+    <div class="task-icon">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" /> <!-- VS Code -->
+    </div>
+    <div class="task-icon">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" /> <!-- LinkedIn -->
+    </div>
+    <div class="task-icon">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" /> <!-- WhatsApp -->
+    </div>
+  </div>
+
+  <!-- Right / System Tray -->
+  <div class="task-right">
+    <span>ENG</span>
+    <span>IN</span>
+    <span>🔊</span>
+    <span>📶</span>
+    <span>🔋</span>
+  </div>
+
+</div>
+
+
+  <!-- START MENU -->
+  <div id="start-menu" class="hidden">
+    <input type="text" placeholder="Search for apps, settings, documents" />
+
+    <h4>Pinned</h4>
+    <div class="apps">
+      <div class="app">🌐 Edge</div>
+      <div class="app">📄 Word</div>
+      <div class="app">📊 Excel</div>
+      <div class="app">⚙️ Settings</div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
